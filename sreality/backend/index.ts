@@ -1,8 +1,8 @@
 import express, { Express } from 'express';
 import dotenv from 'dotenv';
-const path = require('path')
+// const path = require('path')
 
-// const flatsRouter = require('./routes/flats.routes')
+const flatsRouter = require('./routes/flats.routes')
 
 // dotenv.config({ path: path.resolve(__dirname, './../.env') });
 dotenv.config();
@@ -19,7 +19,7 @@ app.use((_,res,next)=>{
   next(); 
 })
 
-// app.use('/api', (flatsRouter));
+app.use('/api', (flatsRouter));
 
 app.get('/', async (req, res) => {
   res.json({

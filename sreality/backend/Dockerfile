@@ -2,8 +2,8 @@ FROM node:19.8.1
 
 WORKDIR /dist
 
-COPY package.json ./
-COPY tsconfig.json ./
+COPY package.json ./package.json
+COPY tsconfig.json ./tsconfig.json
 
 COPY . .
 
