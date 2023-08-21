@@ -21,9 +21,18 @@ class FlatsController {
         const flats =  await queries.selectFlats(limit, offset);
 
         res.json({
-            limit,
-            offset,
+            success: true,
             flats
+        })
+
+    }
+    async deleteFlatsFromDB(req: Request, res: Response) {
+
+        await queries.dropTables(['flats_images', 'flats']);
+        await queries.createTables(['flats', 'flats_images']);
+
+        res.json({
+            success: true
         })
 
     }

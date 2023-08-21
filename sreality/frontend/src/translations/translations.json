@@ -1,0 +1,18 @@
+{
+    "cs": {
+        "translations": {
+            "hello": "Ahoj",
+            "serverError": "Omlouváme se, ale služba je aktuálně nedostupná.",
+            "flatsForSale": "Byty na prodej, Praha",
+            "perPage": "inzerátů na stránce"
+        }
+    },
+    "en": {
+        "translations": {
+            "hello": "Hello",
+            "serverError": "Sorry, the service is currently unavailable.",
+            "flatsForSale": "Apartments for sale, Prague",
+            "perPage": "estates per page"
+        }
+    }
+}

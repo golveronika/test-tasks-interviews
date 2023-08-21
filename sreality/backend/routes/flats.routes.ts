@@ -11,4 +11,6 @@ router.get('/flats/:lang/:count', FlatsController.getFlatsForSale)
 router.post('/flats', FlatsController.postFlatsToDB)
 router.post('/flats/write', FlatsController.postFlatsFromApiToDB)
 
+router.delete('/flats/delete', FlatsController.deleteFlatsFromDB)
+
 module.exports = router
