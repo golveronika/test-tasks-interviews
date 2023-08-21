@@ -2,9 +2,10 @@ import express, { Express } from 'express';
 import dotenv from 'dotenv';
 const path = require('path')
 
-const flatsRouter = require('./routes/flats.routes')
+// const flatsRouter = require('./routes/flats.routes')
 
-dotenv.config({ path: path.resolve(__dirname, './../.env') });
+// dotenv.config({ path: path.resolve(__dirname, './../.env') });
+dotenv.config();
 
 const app: Express = express();
 const port = process.env.NODE_APP_PORT || 8080;
@@ -18,7 +19,13 @@ app.use((_,res,next)=>{
   next(); 
 })
 
-app.use('/api', (flatsRouter));
+// app.use('/api', (flatsRouter));
+
+app.get('/', async (req, res) => {
+  res.json({
+    success: true
+  })
+})
 
 
 app.listen(port, () => {
